@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-container {
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(red, white);
+}
+
+.container {
+    background-color: white;
+    width: 90%; /* Start with wider width for smaller devices */
+    max-width: 500px; /* Restrict maximum width */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form, select, button, input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.7rem;
+    border-radius: 10px;
+}
+
+.amount p {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    margin-bottom: 10px;
+}
+
+form input {
+    border: 1px solid black;
+    font-size: 1rem;
+}
+
+form input:focus {
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.drop-dowm {
+    display: flex;
+    justify-content: space-between; /* Add better spacing */
+    padding: 10px;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 10px; /* Add gap for better spacing */
+    flex-wrap: wrap; /* Wrap elements on smaller screens */
+}
+
+.select-container img {
+    max-width: 2rem;
+}
+
+.select-container {
+    border: 1px solid black;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    padding: 3px;
+}
+
+.drop-dowm i {
+    font-size: 2rem;
+    color: #555; /* Subtle color for better design */
+}
+
+.message-01 {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+}
+
+.container button {
+    padding: 10px;
+    height: auto; /* Remove fixed height */
+    cursor: pointer;
+    border: 1px solid blue;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.container button:hover {
+    background-color: blue;
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 768px) {
+    .drop-dowm {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: stretch; /* Full-width elements */
+    }
+
+    .select-container {
+        width: 100%; /* Full-width for dropdowns */
+    }
+
+    .drop-dowm i {
+        margin: 1rem 0;
+        font-size: 1.5rem; /* Adjust icon size */
+    }
+
+    .message-01 {
+        font-size: 1rem;
+    }
+
+    .amount p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .drop-dowm i {
+        font-size: 1.2rem; /* Smaller icon size for very small screens */
+    }
+
+    .container button {
+        font-size: 1rem; /* Smaller button text */
+    }
+}

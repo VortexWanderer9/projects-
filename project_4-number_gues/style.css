@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:fadeIn 0.5s ease-in-out;
+}
+
+.content {
+    width: 100%;
+    max-width: 500px;
+    background: linear-gradient(135deg, #232526, #414345);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 
+        0 0 15px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(34, 193, 195, 0.4),
+        inset 0 0 10px rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.content:hover {
+    /* transform: scale(1.05); */
+    box-shadow: 
+        0 0 25px rgba(0, 0, 0, 0.5),
+        0 0 50px rgba(238, 9, 121, 0.6),
+        inset 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Adding animated highlights */
+.content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+    animation: float-glow 6s infinite linear;
+    z-index: -1;
+    filter: blur(30px);
+}
+
+/* Keyframes for glowing animation */
+@keyframes float-glow {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, 30px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+
+/* Fade-in effect for the entire container */
+
+ label{
+    font-size: 25px;
+    font-weight: 700;   
+    text-align: center;
+    display: block;
+    width: 100%;
+    animation: input-floating 1.5s  ease-in-out;
+    background: #1c1c1c;
+border: 1px solid #2d2f33;
+color: #d3d3d3;
+
+
+    margin-top: 10px;
+}
+.content-wrapper{
+  background: linear-gradient(135deg, #414345, #232526);
+  border: none;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+    border-radius: 20px;
+    animation:fadeIn 1.5s ease-in-out; 
+    padding: 20px;
+}
+.content-wrapper p{
+    font-size: 20px;
+    font-weight: 700;
+    color: #b4a5ff;
+    text-align: center;
+    display: block;
+    width: 100%;
+    animation: input-floating 1.5s  ease-in-out;
+}
+/* Wrapper for the heading text */
+.heading-text {
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  border-radius: 15px;
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.2), 
+    0 0 30px rgba(238, 9, 121, 0.6), 
+    inset 0 0 10px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Heading text */
+.heading-text h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 30px rgba(238, 9, 121, 0.8);
+  animation: gradient-move 5s linear infinite, fadeIn 2s ease-in-out;
+  background: linear-gradient(135deg, #ffffff, #00ffcc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Glowing particles effect */
+.heading-text::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+  filter: blur(40px);
+  animation: float-glow 6s infinite linear;
+  z-index: -1;
+}
+
+/* Gradient animation */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fade-in animation */
+
+/* Particle floating animation */
+@keyframes float-glow {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #414345;
+    color: #ffffff;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+    animation: input-floating 1.5s  ease-in-out;
+  }
+  
+  input:focus {
+    box-shadow: 0 0 5px #00ffff;
+  }
+
+  @keyframes input-floating {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+   
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+  }
+  
+ /* Wrapper to center the button */
+.crazy-button-wrapper {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+   animation:fadeIn 1.5s ease-in-out;
+   
+  }
+  
+  /* Button styles */
+  .crazy-button {
+    position: relative;
+    width: 50%;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #ff6a00, #ee0979, #1e90ff, #00ff99);
+    background-size: 300%;
+    animation: crazy-gradient-move 5s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 0 0 50px rgba(238, 9, 121, 0.7);
+  
+  }
+  
+  /* Hover effect */
+  .crazy-button:hover {
+    transform: scale(1.2) rotate(2deg);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 60px rgba(238, 9, 121, 0.9);
+  }
+  
+  /* Inner span for extra styling */
+  .crazy-button span {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Glowing particles */
+  .crazy-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 10%, transparent 60%);
+    animation: crazy-particles 3s infinite linear;
+    z-index: 0;
+    filter: blur(5px);
+  }
+  
+  /* Particle motion */
+  @keyframes crazy-particles {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(20px, 30px) scale(1.1);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+  }
+  
+  /* Background gradient animation */
+  @keyframes crazy-gradient-move {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Wrapper for layout */
+.guess-info {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Individual paragraphs */
+.guess-info p {
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 10px 0;
+  color: #f0f0f0;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Highlight the dynamic part */
+.highlight {
+  color: #00ffcc;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+}
+
+/* Add glowing effect to the wrapper */
+.guess-info::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+  animation: float-glow 6s infinite linear;
+  z-index: -1;
+  filter: blur(30px);
+}
+
+/* Animations for glow and fade-in */
+
+@keyframes float-glow {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

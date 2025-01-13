@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess random Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <div class="content">
+        <div class="heading-text">
+            <h1>Number Guess game</h1>
+        </div>
+        
+        <div class="content-wrapper">
+            <p id="checkGuess">Guess the number between 1 and 100 in 10 turns or fewer. We'll tell you if it's too high or too low.</p>
+        </div>
+        <div class="input-content">
+            <label for="guessField">Enter a guess: </label>
+        <input type="text" id="guessField" class="guessField">
+        </div>
+        <div class="guess-info">
+            <p id="previous">Previous Guess: <span class="highlight previousGuess">None</span></p>
+            <p id="chance">Total Attempt: <span class="highlight count">0</span></p>
+            
+          </div>
+          
+        <div class="crazy-button-wrapper">
+            <button class="crazy-button">
+              <span>Submit</span>
+            </button>
+          </div>
+          
+        <div class="result-paras">
+            <p class="guesses"></p>
+            <p class="lastResult"></p>
+            
+            
+        </div>
+        </div>
+           <p class="lastResult"></p>  
+       </div>                       
+    </div>
+    <script src="node.js"></script>
+</body>
+</html>

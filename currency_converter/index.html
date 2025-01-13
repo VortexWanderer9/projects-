@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter(exchange rate)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-container">
+    <div class="container">
+        <h2>Currency Converter</h2>
+        <form>
+            <div class="amount">
+                <p>Enter amount</p>
+            <input type="text" value="1">
+            </div>
+            <div class="drop-dowm">
+                <div class="from">
+                <p>From</p>
+                <div class="select-container">
+                    <img src="https://flagsapi.com/US/flat/64.png">
+                    <select name="from" id="frm">
+                    </select>
+                </div>
+                </div>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                <div class="to">
+                    <p>TO</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/NP/flat/64.png">
+                        <select name="to" id="frm">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="message-01">135.19NRS to 1$</div>
+            <button>Get Exchange</button>
+        </form>
+    </div>
+</div>
+<script src="codes.js"></script>
+<script src="node.js"></script>
+</body>
+</html>
