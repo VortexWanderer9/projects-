@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    height: 100vh;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #213555;
+}
+.content {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+    min-height: 50vh;
+    width: 90%;            
+    max-width: 700px;       
+    padding: 20px;
+    background-color: #3E5879;
+    box-shadow: 3px 4px 5px rgb(0, 0, 0);
+    border-radius: 9px;
+ }
+ .content:hover{
+    box-shadow: 5px 7px 30px rgb(0, 0, 0,0.5);
+ }
+
+
+ @media (max-width: 800px) {
+    .content {
+       width: 95vw;         
+       min-width: auto;  
+    }
+   .input-field input{
+      width: 100%;
+     
+   }
+   /* .btn-txt{
+      font-size: .5rem;
+   } */
+
+ }
+ .content2{
+    height: 100vh;
+    width: 100%;
+ }
+ .input-field{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+ }
+
+ .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    width: 100px;
+   padding: .9rem;
+    background-color: #FFD95F;
+    cursor: pointer;
+ }
+ .button span{
+    font-size: 1.4rem;
+    color: #213555;
+    z-index: 2;
+    font-family: sans-serif;
+    font-weight: 700;
+ }
+
+ .data-display{
+   width: 100%;
+   padding: 10px;
+   gap: 5px;
+   box-shadow: 0 3px 5px rgb(0, 0, 0,0.1);
+   display: flex;
+   justify-content: center;
+ }
+
+ .each-day-update{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+
+ }
+
+ .firstDay{
+   width: 100%;
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+ @media (max-width: 700px) {
+   .firstDay{
+      flex-direction: column;
+      gap: 20px;
+   }
+
+ }
+
+ .data-of-day{
+   display: flex;
+   gap: 10px;
+   cursor: pointer;
+   
+ }
+
+ .temperature{
+   color: #213555;
+   cursor: pointer;
+ }
+
+ .humidity{
+   color: #FFD95F;
+   cursor: pointer;
+ }
+.day-name{
+   color: beige;
+   cursor: pointer;
+}
+
+.message-display{
+   animation: haha 5s linear infinite forwards;
+   width: 100%;
+  box-shadow: 0 0 0;
+  font-size: 1rem;
+  text-shadow:  0 4px 5px #213555;
+  text-align: center;
+  color: darkgoldenrod;
+  padding: 10px;
+}
+
+.error-message{
+   color: red;
+}
+
+@keyframes haha {
+   0%{
+      box-shadow: 0 0 5px #213555, 0 4px 5px #3E5879, 2px 4px  5px #FFD95F;
+   }
+   50%{
+      box-shadow: 0 4px 5px #213555, 0 0 5px #3E5879, 2px 4px  5px #FFD95F;
+   }
+   80%{
+      box-shadow: 4px 5px 6px #213555, 0 4px 5px #3E5879, 0 0 5px #FFD95F;
+   }
+   100%{
+         box-shadow: 0 4px 5px #213555, 0 0 5px #3E5879, 2px 4px  5px #FFD95F;
+   }
+}

@@ -1,0 +1,112 @@
+
+.content{
+    animation: fadeIn 3s cubic-bezier(0.65,-0.07, 0.36, 1.13) forwards;
+    
+
+}
+
+@keyframes fadeIn {
+    from{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+.title{
+    text-shadow: 0px 4px 7px rgb(0, 0, 0,0.5);
+    color: #E6E9AF;
+    position: relative;
+    animation: fadeIn 3s cubic-bezier(0.65,-0.07, 0.36, 1.13) forwards;
+}
+
+
+.title::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    animation:removeBlur 1.6s linear forwards ;
+}
+
+
+
+@keyframes removeBlur {
+    0%{
+        width: 100%;
+        
+    }
+    100%{
+        width: 0;
+        
+    }
+}
+
+.button{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeIn 2s cubic-bezier(0.65,-0.07, 0.36, 1.13) forwards;
+   
+}
+.button {
+    position: relative;
+    overflow: hidden;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+    border-radius: 50%;
+    top: var(--posY);
+    left: var(--posX);
+    transform: translate(-50%, -50%);
+    transition: width 1s, height 1s, opacity 0.5s;
+    opacity: 0;
+}
+
+.button:hover::before {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+}
+
+.input-field input{
+
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #414345;
+    color: #ffffff;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+    animation: input-floating 1.5s  ease-in-out;
+    animation: fadeIn 2s cubic-bezier(0.65,-0.07, 0.36, 1.13) forwards;
+
+}
+.input-field input:focus{
+    box-shadow: 0 0 5px #00ffff;
+}
+
+.input-field input::placeholder{
+    color: #f4f4f4;
+    padding: 20px;
+}
+
+.data-display{
+    color: #E6E9AF;
+    text-shadow: 0 0 10px ;
+    animation: fadeIn 1s cubic-bezier(0.65,-0.07, 0.36, 1.13) forwards;
+   
+}
+
+.firstDay{
+    animation: fadeIn 5s cubic-bezier(0.65,-0.07, 0.36, 1.13) forwards;
+}
