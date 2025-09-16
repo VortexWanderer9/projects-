@@ -12,7 +12,5 @@ buttons.addEventListener('click', (e) =>{
     }else if (e.target.id === 'White') {
         body.style.backgroundColor = 'White'
     }
-    
 })
-
 })
