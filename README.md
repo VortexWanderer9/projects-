@@ -1,2 +1,1 @@
-# projects-
-just try
+##Collections of simple projects
